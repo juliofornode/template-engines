@@ -7,4 +7,10 @@ myRouter.route('/')
         return myController.index(req, res);
     });
 
+
+myRouter.route('/jade')
+    .get(function(req, res) {
+        return myController.indexJade(req, res);
+    });
+
 module.exports = myRouter;

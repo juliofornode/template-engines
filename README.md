@@ -20,3 +20,9 @@ app.set('view engine', 'html');
 ```
 
 ## Use multiple template engines in the same project
+```
+var jade = require('jade');
+
+app.engine('jade', jade.__express);
+app.engine('html', consolidate.handlebars);
+````

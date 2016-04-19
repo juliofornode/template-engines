@@ -1,5 +1,6 @@
 //1. dependencies
 var express = require('express');
+var jade = require('jade');
 var consolidate = require('consolidate');
 
 //custom modules
@@ -16,8 +17,10 @@ var app = express();
 //4. app configuration (app.set)
 app.set('views', __dirname + '/views');
 //app.set('view engine', 'jade');
+app.engine('jade', jade.__express);
 app.engine('html', consolidate.handlebars);
-app.set('view engine', 'html');
+//app.set('view engine', 'html');
+app.locals.apellido = "Garcia";
 
 //5. middleware definition (app.use)
 
